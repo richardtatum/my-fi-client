@@ -1,4 +1,7 @@
-﻿namespace MyFi.TheBadlands;
+﻿using MyFi.TheBadlands.Database;
+using MyFi.TheBadlands.Repositories;
+
+namespace MyFi.TheBadlands;
 
 public class Startup
 {
@@ -13,6 +16,9 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+        services.AddSingleton<IDbConnectionConfig>(new SqliteConnectionConfig(Configuration["DatabaseName"]));
+        services.AddScoped<CommandRepository>();
+        services.AddScoped<QueryRepository>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
