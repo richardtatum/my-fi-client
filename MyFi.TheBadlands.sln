@@ -1,0 +1,46 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFi.TheBadlands.Database", "src\MyFi.TheBadlands.Database\MyFi.TheBadlands.Database.csproj", "{1EEDC1EA-EF0A-4D4C-9775-61551AC817CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFi.TheBadlands", "src\MyFi.TheBadlands\MyFi.TheBadlands.csproj", "{F5110EB4-6795-4F69-A491-0A93C2DD2EA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFi.TheBadlands.Tests", "test\MyFi.TheBadlands.Tests\MyFi.TheBadlands.Tests.csproj", "{A134E658-71E8-4D23-8F72-2E54FB7632DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B9699AC-B544-4B7C-B081-558D78AE1142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{09C17F91-8432-4BCD-8E64-CCAE90E4B773}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyFi.TheBadlands", "..\MyFi.TheBadlands", "{5E6C48AC-0B97-4BFB-B4DB-20D3155A12C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EEDC1EA-EF0A-4D4C-9775-61551AC817CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEDC1EA-EF0A-4D4C-9775-61551AC817CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEDC1EA-EF0A-4D4C-9775-61551AC817CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEDC1EA-EF0A-4D4C-9775-61551AC817CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5110EB4-6795-4F69-A491-0A93C2DD2EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5110EB4-6795-4F69-A491-0A93C2DD2EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5110EB4-6795-4F69-A491-0A93C2DD2EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5110EB4-6795-4F69-A491-0A93C2DD2EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A134E658-71E8-4D23-8F72-2E54FB7632DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A134E658-71E8-4D23-8F72-2E54FB7632DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A134E658-71E8-4D23-8F72-2E54FB7632DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A134E658-71E8-4D23-8F72-2E54FB7632DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1EEDC1EA-EF0A-4D4C-9775-61551AC817CD} = {7B9699AC-B544-4B7C-B081-558D78AE1142}
+		{F5110EB4-6795-4F69-A491-0A93C2DD2EA3} = {7B9699AC-B544-4B7C-B081-558D78AE1142}
+		{7B9699AC-B544-4B7C-B081-558D78AE1142} = {5E6C48AC-0B97-4BFB-B4DB-20D3155A12C2}
+		{A134E658-71E8-4D23-8F72-2E54FB7632DA} = {09C17F91-8432-4BCD-8E64-CCAE90E4B773}
+		{09C17F91-8432-4BCD-8E64-CCAE90E4B773} = {5E6C48AC-0B97-4BFB-B4DB-20D3155A12C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EC241B9-4179-4B34-A192-BD65295A8B27}
+	EndGlobalSection
+EndGlobal
