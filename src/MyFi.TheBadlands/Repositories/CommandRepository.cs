@@ -15,7 +15,7 @@ public class CommandRepository
 
     private DbConnection GetConnection() => _dbConnection.GetConnection();
 
-    public async Task<Guid> InsertUser(string name)
+    public async Task<Guid> InsertUserAsync(string name)
     {
         var id = Guid.NewGuid();
         using var conn = GetConnection();
@@ -28,7 +28,7 @@ public class CommandRepository
         return id;
     }
 
-    public Task UpdateUser(Guid id, string name)
+    public Task UpdateUserAsync(Guid id, string name)
     {
         using var conn = GetConnection();
         return conn.ExecuteAsync("UPDATE User SET name = @name WHERE id = @id", new
@@ -38,7 +38,7 @@ public class CommandRepository
         });
     }
 
-    public Task DeleteUser(Guid id)
+    public Task DeleteUserAsync(Guid id)
     {
         using var conn = GetConnection();
         return conn.ExecuteAsync("DELETE FROM User WHERE id = @id", new { id });

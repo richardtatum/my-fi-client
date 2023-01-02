@@ -4,7 +4,7 @@ using MyFi.TheBadlands.Repositories;
 
 namespace MyFi.TheBadlands.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 public class UserController : ControllerBase
 {
     private readonly CommandRepository _command;
@@ -19,13 +19,13 @@ public class UserController : ControllerBase
     [HttpGet]
     public Task<IEnumerable<User>> Get()
     {
-        return _query.GetUsers();
+        return _query.GetUsersAsync();
     }
 
     [HttpGet("{id}")]
-    public Task<User> Get(Guid id)
+    public Task<User?> Get(Guid id)
     {
-        return _query.GetUser(id);
+        return _query.GetUserAsync(id);
     }
 
     [HttpPost]
@@ -36,7 +36,7 @@ public class UserController : ControllerBase
             return BadRequest();
         }
 
-        var userId = await _command.InsertUser(request.Name);
+        var userId = await _command.InsertUserAsync(request.Name);
         return Ok(userId);
     }
 
@@ -48,13 +48,13 @@ public class UserController : ControllerBase
             return BadRequest();
         }
 
-        await _command.UpdateUser(id, request.Name);
+        await _command.UpdateUserAsync(id, request.Name);
         return Ok();
     }
 
     [HttpDelete("{id}")]
     public Task Delete(Guid id)
     {
-        return _command.DeleteUser(id);
+        return _command.DeleteUserAsync(id);
     }
 }

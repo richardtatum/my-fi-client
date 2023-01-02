@@ -16,16 +16,16 @@ public class QueryRepository
 
     private DbConnection GetConnection() => _dbConnection.GetReadConnection();
 
-    public Task<IEnumerable<User>> GetUsers()
+    public Task<IEnumerable<User>> GetUsersAsync()
     {
         using var conn = GetConnection();
         return conn.QueryAsync<User>("SELECT id, name FROM User");
     }
 
-    public Task<User> GetUser(Guid id)
+    public Task<User?> GetUserAsync(Guid id)
     {
         using var conn = GetConnection();
-        return conn.QueryFirstOrDefaultAsync<User>("SELECT id, name FROM User WHERE id = @id", new
+        return conn.QueryFirstOrDefaultAsync<User?>("SELECT id, name FROM User WHERE id = @id", new
         {
             id
         });
